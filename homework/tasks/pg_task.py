@@ -40,9 +40,9 @@ class ItemStorage:
         # YOUR CODE GOES HERE
         await self._pool.execute("""
                 CREATE TABLE IF NOT EXISTS items (
-                    item_id SERIAL PRIMARY KEY
-                    user_id INTEGER NOT NULL
-                    title TEXT NOT NULL
+                    item_id SERIAL PRIMARY KEY,
+                    user_id INTEGER NOT NULL,
+                    title TEXT NOT NULL,
                     description TEXT NOT NULL
                 );
         """)
