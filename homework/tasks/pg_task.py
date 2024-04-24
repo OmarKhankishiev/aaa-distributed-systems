@@ -56,7 +56,7 @@ class ItemStorage:
         # sql injections https://habr.com/ru/articles/148151/.
         # YOUR CODE GOES HERE
         query = """
-            INSERT INTO items (item_id, user_id, title, desctiption)
+            INSERT INTO items (item_id, user_id, title, description)
             VALUES($1, $2, $3, $4)
         """
         query_items = [(item.item_id, item.user_id, item.title, item.description) for item in items]
