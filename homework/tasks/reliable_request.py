@@ -20,6 +20,7 @@ async def do_reliable_request(url: str, observer: ResultsObserver,
 
     Все успешно полученные результаты должны регистрироваться с помощью обсёрвера.
     """
+    curr_try = 0
 
     async with httpx.AsyncClient() as client:
         # YOUR CODE GOES HERE
